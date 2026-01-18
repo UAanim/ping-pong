@@ -60,7 +60,7 @@ def receive():
 font_win = font.Font(None, 72)   # Великий шрифт для перемоги
 font_main = font.Font(None, 36)  # Основний шрифт
 # --- ЗОБРАЖЕННЯ ----
-BG_IMG = image.load("BG.jpg")
+BG_IMG = image.load("images/BG.jpg")
 BG_IMG = transform.scale(BG_IMG, (800, 600))
 # --- ЗВУКИ ---
 hit = mixer.Sound("music/udar.wav")
