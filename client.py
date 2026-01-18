@@ -7,7 +7,7 @@ from threading import Thread # Потік для прийому даних па�
 WIDTH, HEIGHT = 800, 600# Розмір ігрового вікна
 init()# Ініціалізація pygame
 mixer.init()
-mixer.music.load("fon.mp3")
+mixer.music.load("music/fon.mp3")
 screen = display.set_mode((WIDTH, HEIGHT))  # Створення вікна
 clock = time.Clock()        # Таймер для обмеження FPS
 display.set_caption("Пінг-Понг")  # Заголовок вікна
@@ -63,7 +63,7 @@ font_main = font.Font(None, 36)  # Основний шрифт
 BG_IMG = image.load("BG.jpg")
 BG_IMG = transform.scale(BG_IMG, (800, 600))
 # --- ЗВУКИ ---
-hit = mixer.Sound("udar.wav")
+hit = mixer.Sound("music/udar.wav")
 # --- ГРА ---
 game_over = False        # Чи завершена гра
 winner = None            # Переможець
