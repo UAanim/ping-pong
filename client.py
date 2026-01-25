@@ -7,7 +7,7 @@ from threading import Thread # Потік для прийому даних па�
 WIDTH, HEIGHT = 800, 600# Розмір ігрового вікна
 init()# Ініціалізація pygame
 mixer.init()
-mixer.music.load("music/fon.mp3")
+mixer.music.load("fon.mp3")
 screen = display.set_mode((WIDTH, HEIGHT))  # Створення вікна
 clock = time.Clock()        # Таймер для обмеження FPS
 display.set_caption("Пінг-Понг")  # Заголовок вікна
@@ -60,10 +60,10 @@ def receive():
 font_win = font.Font(None, 72)   # Великий шрифт для перемоги
 font_main = font.Font(None, 36)  # Основний шрифт
 # --- ЗОБРАЖЕННЯ ----
-BG_IMG = image.load("images/BG.jpg")
+BG_IMG = image.load("BG.jpg")
 BG_IMG = transform.scale(BG_IMG, (800, 600))
 # --- ЗВУКИ ---
-hit = mixer.Sound("music/udar.wav")
+hit = mixer.Sound("udar.wav")
 # --- ГРА ---
 game_over = False        # Чи завершена гра
 winner = None            # Переможець
@@ -103,7 +103,7 @@ while True:
             you_winner = (game_state["winner"] == my_id)
  
         # Текст залежно від результату
-        text = "Ти переміг!" if you_winner else "Пощастить наступного разу!"
+        text = "Ти переміг!" if you_winner else "НУ ТИ І ЛОХ ХААХАХАХАХААХ!"
  
         win_text = font_win.render(text, True, (255, 215, 0))
         screen.blit(win_text, win_text.get_rect(center=(WIDTH // 2, HEIGHT // 2)))
